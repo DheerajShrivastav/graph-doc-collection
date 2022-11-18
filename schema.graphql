@@ -1,0 +1,22 @@
+type ActiveItem @entity {
+  id: ID!
+  owner: Bytes! # address, (seller)
+  docAddress: Bytes! # address, (nftAddress)
+  tokenId: BigInt!
+  title: String
+}
+
+type DocUploaded @entity {
+  id: ID!
+  owner: Bytes!
+  docAddress: Bytes!
+  tokenId: BigInt!
+  title: String
+}
+
+type DocDeleted @entity {
+  id: ID!
+  owner: Bytes!
+  docAddress: Bytes!
+  tokenId: BigInt!
+}
